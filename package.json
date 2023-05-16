@@ -1,13 +1,12 @@
 {
-  "name": "preset-icon-shadow",
+  "name": "icon-shadow",
   "version": "1.0.0",
-  "description": "Add a shadow to custom icons using the Preset Icons",
+  "description": "Add a shadow to custom icons using Preset Icons",
   "packageManager": "pnpm@8.5.1",
   "author": "Rettend",
   "license": "MIT",
   "keywords": [
     "unocss",
-    "unocss-preset",
     "unocss-shadow",
     "unocss-icon"
   ],
@@ -36,9 +35,7 @@
     "release": "bumpp package.json packages/**/package.json"
   },
   "peerDependencies": {
-    "@unocss/preset-icons": "0.51.13"
-  },
-  "dependencies": {
+    "@unocss/preset-icons": "0.51.13",
     "@unocss/core": "^0.51.12"
   },
   "devDependencies": {
@@ -47,7 +44,6 @@
     "bumpp": "^9.1.0",
     "eslint": "^8.40.0",
     "typescript": "^5.0.4",
-    "unbuild": "^1.2.1",
-    "vitest": "^0.31.0"
+    "unbuild": "^1.2.1"
   }
 }
