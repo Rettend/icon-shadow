@@ -31,7 +31,7 @@
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp package.json"
+    "release": "bumpp --commit --push --tag && pnpm publish"
   },
   "peerDependencies": {
     "@unocss/preset-icons": "0.51.13",
