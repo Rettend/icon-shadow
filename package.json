@@ -1,6 +1,6 @@
 {
   "name": "icon-shadow",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Add a shadow to custom icons from UnoCSS Preset Icons",
   "packageManager": "pnpm@8.5.1",
   "author": "Rettend",
@@ -36,7 +36,7 @@
     "lint": "eslint .",
     "lint:fix": "pnpm run lint --fix",
     "typecheck": "tsc --noEmit",
-    "release": "bumpp --commit --push --tag && pnpm publish"
+    "release": "bumpp && pnpm publish"
   },
   "peerDependencies": {
     "@unocss/preset-icons": "0.51.13",
