@@ -2,8 +2,13 @@
 
 A transform function to add a shadow to icons from UnoCSS Icons Preset
 
-- You can use this with [custom](https://unocss.dev/presets/icons#customization) icon collections, so only for icons that you've saved locally.
-- The color is not customizable, it always matches the icon color, but works with gradients.
+## Pros and Cons
+
+- ✅ Shows shadow behind transparent areas of the icon (modifies the svg path)
+- ✅ The shadow matches the icon color, and even works with gradients
+
+- ❌ You can use this with [custom](https://unocss.dev/presets/icons#customization) icon collections, so only for icons that you've saved locally
+- ❌ The color is not customizable
 
 ## Install
 
