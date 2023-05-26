@@ -28,11 +28,35 @@ pnpm i -D icon-shadow
 
 `unocs.config.ts`
 
-Load icons from a folder.
-
-Access them with `<div class="i-shadow:svg-name" />`, if the icon is named `svgName.svg`.
+Apply to all custom loaded icons:
 
 ```ts
+import { defineConfig, presetIcons } from 'unocss'
+import { insertShadow } from 'icon-shadow'
+
+export default defineConfig({
+  presets: [
+    presetIcons({
+      customizations: {
+        transform(svg) {
+          return insertShadow(svg, {
+            dx: 0,
+            dy: 0,
+            stdDeviation: 2,
+            opacity: 0.3,
+            viewBoxScale: 1.5,
+          })
+        },
+      },
+    }),
+  ],
+})
+```
+
+Or load icons from a folder:
+
+```ts
+import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
 import { defineConfig, presetIcons } from 'unocss'
 import { insertShadow } from 'icon-shadow'
 
@@ -56,32 +80,9 @@ export default defineConfig({
 })
 ```
 
-Or apply to all custom loaded icons:
-> **Note:** you will need to install `@iconify/utils` as a dependency
+Access them with `<div class="i-shadow:svg-name" />`, if the icon is named `svgName.svg`.
 
-```ts
-import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
-import { defineConfig, presetIcons } from 'unocss'
-import { insertShadow } from 'icon-shadow'
-
-export default defineConfig({
-  presets: [
-    presetIcons({
-      customizations: {
-        transform(svg) {
-          return insertShadow(svg, {
-            dx: 0,
-            dy: 0,
-            stdDeviation: 2,
-            opacity: 0.3,
-            viewBoxScale: 1.5,
-          })
-        },
-      },
-    }),
-  ],
-})
-```
+> **Note**: you will need to install `@iconify/utils` as a dependency
 
 I only created the `insertShadow` function which can be used to transform the svg string. 👍
 
