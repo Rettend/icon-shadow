@@ -1,6 +1,6 @@
 {
   "name": "icon-shadow",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Add a shadow to custom icons from UnoCSS Preset Icons",
   "packageManager": "pnpm@8.5.1",
   "author": "Rettend",
